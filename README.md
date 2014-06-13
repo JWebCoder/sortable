@@ -3,7 +3,7 @@
 ###jayScript plugin to make tables sortable
 
 
-Sortable is an open-source javascript and CSS library plugin for jayScript, which adds sorting functionality to tables.
+Sortable is an open-source javascript and CSS library plugin for [jayScript](https://github.com/JWebCoder/jayScript), which adds sorting functionality to tables.
 
 #### Credits
 
