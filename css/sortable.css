@@ -27,7 +27,7 @@ table[data-sortable] th:after{
     vertical-align: inherit;
     height: 0;
     width: 0;
-    border-width: 5px
+    border-width: 5px;
     border-style: solid;
     border-color: transparent;
     margin-right: 1px;

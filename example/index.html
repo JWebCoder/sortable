@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sortable Example</title>   
+        <link type="text/css" href="../css/sortable-theme-light.min.css" rel="stylesheet">
+        <script type="text/javascript" src="http://jayscript.servehttp.com/static/js/jayScript.js"></script>
+        <script type="text/javascript" src="../js/sortable.min.js"></script>
+        <script type="text/javascript">
+            j.onDomReady(function() {
+                j.sortable.setTables();
+            });
+        </script>
+    </head>
+    <body>
+        <table data-sortable class="sortable-theme-light">
+            <thead>
+                <th data-default-direction="ascending">
+                    Number
+                </th>
+                <th>
+                    Text
+                </th>
+                <th>
+                    Custom
+                </th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        b
+                    </td>
+                    <td data-value="2">
+                        Costum2
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        c
+                    </td>
+                    <td data-value="3">
+                        Costum3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3
+                    </td>
+                    <td>
+                        a
+                    </td>
+                    <td data-value="1">
+                        Costum1
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

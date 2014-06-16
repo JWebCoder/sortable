@@ -58,13 +58,19 @@ j.sortable = {
                 index,
                 len,
                 tBodyRows,
-                results;
+                results,
+                defaultSort;
             sorted = this.getAttribute('data-sorted') === 'true';
+            defaultSort = this.getAttribute('data-default-direction');
             sortedDirection = this.getAttribute('data-sorted-direction');
             if (sorted) {
                 newSortedDirection = sortedDirection === 'ascending' ? 'descending' : 'ascending';
             } else {
-                newSortedDirection = type.defaultSortDirection;
+                if (defaultSort !== null) {
+                    newSortedDirection = defaultSort;
+                } else {
+                    newSortedDirection = type.defaultSortDirection;
+                }
             }
             ths = j.selectByQuery('th', this.parentNode);
             for (index = 0, len = ths.length; index < len; index += 1) {
@@ -85,6 +91,9 @@ j.sortable = {
                 rowArray.reverse();
             } else {
                 rowArray.sort(type.compare);
+                if (newSortedDirection !== type.defaultSortDirection) {
+                    rowArray.reverse();
+                }
             }
             results = [];
             for (index = 0, len = rowArray.length; index < len; index += 1) {
