@@ -47,7 +47,7 @@ j.sortable = {
         var type, self;
         self = this;
         type = this.getColumnType(table, i);
-        return j.addEvent(th, this.clickEvent, function (e) {
+        j.addEvent(th, this.clickEvent, function (e) {
             var newSortedDirection,
                 row,
                 rowArray,
@@ -101,6 +101,9 @@ j.sortable = {
             }
             return results;
         });
+        if (th.getAttribute("data-sortable-default") === "") {
+            j.triggerEvent(th, "click");
+        }
     },
     
     getColumnType: function (table, i) {
